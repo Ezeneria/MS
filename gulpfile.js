@@ -4,7 +4,8 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglifyjs'),
     cssnano = require('gulp-cssnano'),
-    rename = require('gulp-rename');
+    rename = require('gulp-rename'),
+    merge = require('merge-stream');
 
 gulp.task('sass',function () {
    return gulp
@@ -14,11 +15,11 @@ gulp.task('sass',function () {
        .pipe(browserSync.reload({stream: true}))
 });
 
-gulp.task('sass-concat',function () {
-   return gulp.src('app/sass/**/*.sass')
-       .pipe(concat('styles.sass'))
-       .pipe(gulp.dest('app/css'))
-});
+// gulp.task('sass-concat',function () {
+//    return gulp.src('app/sass/**/*.sass')
+//        .pipe(concat('styles.sass'))
+//        .pipe(gulp.dest('app/css'))
+// });
 
 gulp.task('browser-sync',function () {
    browserSync({
@@ -27,9 +28,10 @@ gulp.task('browser-sync',function () {
        },
        notify: false
    })
+    gulp.task
 });
 
-gulp.task('watch', ['browser-sync','sass','sass-concat'],function () {
+gulp.task('watch', ['browser-sync','sass','deaf'],function () {
    gulp.watch('app/sass/**/*.sass',['sass']);
     gulp.watch('app/js/*.js',browserSync.reload);
     gulp.watch('app/*.html',browserSync.reload);
