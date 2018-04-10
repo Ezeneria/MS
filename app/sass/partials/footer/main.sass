@@ -1,0 +1,62 @@
+@import "media"
+.footer
+  display: flex
+  flex-wrap: wrap
+  padding-top: rem(15px)
+  &__navMenu
+    padding-left: 49px
+    flex: 0 0 100%
+  &__navMenu
+    display: flex
+    flex-wrap: wrap
+.social
+  flex: 0 0 50%
+  padding: rem(12px 0 12px 49px)
+  background-color: #000
+  display: flex
+  align-items: center
+  justify-content: flex-start
+  font-size: 0.875rem
+  font-weight: 700
+  line-height: 1.875rem
+  span
+    color: #fff
+    margin-right: rem(10px)
+  li
+    display: flex
+    a
+      display: block
+      width: 2rem
+      height: 2rem
+      background: no-repeat center
+      &:first-child
+        background-image: url(/img/icons/facebook.png)
+        background-size: rem(9px 18px)
+      &:nth-child(2)
+        background-image: url(/img/icons/social2.png)
+        background-size: rem(12px 19px)
+      &:last-child
+        background-image: url(/img/icons/vk.png)
+        background-size: rem(23px 14px)
+.subscribe
+  padding-right: 49px
+  flex: 0 0 50%
+  font-weight: 700
+  background-color: #000
+  justify-content: flex-end
+  display: flex
+  align-items: center
+  &__title
+    color: #fff
+    margin-right: rem(11px)
+  &__form
+    input[type="email"]
+      width: 15.125rem
+      height: 1.875rem
+      padding-left: rem(9px)
+    input[type="submit"]
+      width: 6.25rem
+      height: 1.875rem
+      border: 0.063rem solid #cccccc
+      background-image: linear-gradient(to top, #e6e6e6 0%, #ffffff 100%)
+

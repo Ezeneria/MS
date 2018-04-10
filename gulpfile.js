@@ -30,7 +30,7 @@ var path = {
     watch: { //Указываем, за изменением каких файлов мы хотим наблюдать
         html: 'app/**/*.html',
         js: 'app/js/**/*.js',
-        style: 'app/style/**/*.sass',
+        style: 'app/sass/**/*.sass',
         img: 'app/img/**/*.*',
         fonts: 'app/fonts/**/*.*'
     },
@@ -44,7 +44,7 @@ var config = {
     },
     tunnel: true,
     host: 'localhost',
-    port: 9000
+    port: 3000
 };
 gulp.task('html:dist', function () {
     gulp.src(path.app.html) //Выберем файлы по нужному пути
@@ -90,7 +90,7 @@ gulp.task('image:dist', function () {
             use: [pngquant()],
             interlaced: true
         }))
-        .pipe(gulp.dest(path.app.img)) //И бросим в build
+        .pipe(gulp.dest(path.dist.img)) //И бросим в build
         .pipe(reload({stream: true}));
 });
 //**************************************************
@@ -114,22 +114,16 @@ gulp.task('build', [
 
 //********************WATCH************************
 gulp.task('watch', function(){
-    watch([path.watch.html], function(event, cb) {
-        gulp.start('html:dist');
-    });
-    watch([path.watch.style], function(event, cb) {
-        gulp.start('style:dist');
-    });
-    watch([path.watch.js], function(event, cb) {
-        gulp.start('js:dist');
-    });
-    watch([path.watch.img], function(event, cb) {
-        gulp.start('image:dist');
-    });
-    watch([path.watch.fonts], function(event, cb) {
-        gulp.start('fonts:dist');
-    });
+    gulp.watch(path.watch.html,['html:dist']);
+    gulp.watch(path.watch.style, ['style:dist']);
+    gulp.watch(path.watch.js,['js:dist']);
+    gulp.watch(path.watch.img,['image:dist']);
 });
+
+//     gulp.watch([path.watch.fonts], function(event, cb) {
+//         gulp.start('fonts:dist');
+//     });
+// });
 //**************************************************
 
 //********************SERVER************************

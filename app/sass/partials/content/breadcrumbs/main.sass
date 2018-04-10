@@ -1,0 +1,30 @@
+.breadcrumbs
+  margin-top: rem(9px)
+  ul
+    display: flex
+    li
+      position: relative
+      padding-right: rem(8px)
+      &:last-child
+        &:after
+          content: none
+      &:after
+        content: '/'
+        position: absolute
+        color: #000
+        right: rem(3px)
+        top: rem(3px)
+        font-size: rem(13px)
+        font-weight: 500
+
+      list-style-type: none
+      a
+        width: 7.438rem
+        height: 0.688rem
+        font-size: rem(12px)
+        font-weight: 600
+        line-height: 1.125rem
+        letter-spacing: 0
+
+//***********************
+@import "_media"
