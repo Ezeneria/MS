@@ -1,0 +1,21 @@
+{
+  "name": "testnignii",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Ezeneria"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/libs/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+  "jquery": "3.*"
+}
+}

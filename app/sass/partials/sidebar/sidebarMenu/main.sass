@@ -1,0 +1,39 @@
+.sidebar
+  padding-top: rem(15px)
+  width: 21.8%
+.sidebarMenu
+  border-top: 5px solid
+  .hasChildren
+    position: relative
+    &:after
+      content: ''
+      position: absolute
+      width: rem(8px)
+      height: rem(8px)
+      background: url(/img/icons/pag-next.png) no-repeat
+      background-size: contain
+      transform: rotate(90deg)
+      top: rem(18px)
+      left: rem(26px)
+    &.active
+      &:after
+        transform: rotate(-90deg)
+    ul
+      display: none
+  li
+    font-family: HelveticaNeueCyr
+    color: #666a6f
+    font-size: 0.875rem
+    font-weight: 300
+    line-height: 1.875rem
+    font-weight: 300
+    text-transform: none
+  & > ul
+    & > li
+      font-family: "Roboto Condensed"
+      font-size: 1rem
+      font-weight: 500
+      line-height: 1.5rem
+      text-transform: uppercase
+      padding: rem(8px 0 8px 48px)
+      border-bottom: 1px solid #e7e7e7
