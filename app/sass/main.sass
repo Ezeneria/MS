@@ -1,7 +1,6 @@
 @import "partials/fonts/fonts.css"
 @import "../../node_modules/sass-rem/rem"
 @import "../libs/jquery-selectric/public/selectric.css"
-
 html
   font-size: 16px
   font-family: HelveticaNeueCyr
@@ -21,9 +20,7 @@ body
   font-size: .875rem
   max-width: 100rem
   margin: 0 auto
-  
-.inner-page
-  padding: 0 49px
+
 .btn
   cursor: pointer
   display: block
@@ -40,8 +37,8 @@ body
     .label
       font-size: 0.875rem
       font-family: HelveticaNeueCyr
-      height: 32px
-      line-height: 32px
+      height: rem(29px)
+      line-height: rem(29px)
     .button
       background-color: transparent
       &:after
@@ -50,9 +47,11 @@ body
         top: 0
         left: rem(6px)
 //  ****************************
+@import "partials/productItem/main"
 @import "partials/header/main"
 @import "partials/footer/main"
 @import "partials/content/main"
 @import "partials/sidebar/main"
+@import "partials/modal/main"
 @import "modifications"
 

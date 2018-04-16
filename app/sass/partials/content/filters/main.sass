@@ -1,11 +1,39 @@
 .productFilters
   display: flex
   flex-wrap: wrap
-  margin-top: rem(27px)
-  .pagination
-    margin-top: rem(12px)
+  justify-content: space-between
+  margin-top: rem(29px)
+  &__buttonMobile
+    display: none
+    position: relative
+    padding: .625rem .5625rem .5625rem 1.625rem
+    border: .063rem solid #b9c94f
+    background-color: #c3d659
+    background-image: linear-gradient(to top,#b7c74a 0,#cddf59 100%)
+    font-size: .688rem
+    font-weight: 700
+    text-transform: uppercase
+    &:after
+      content: ''
+      position: absolute
+      width: 0.75rem
+      height: 0.625rem
+      background: url(/img/icons/filter-icon.png) no-repeat
+      -webkit-background-size: contain
+      background-size: contain
+      left: .5625rem
+      top: .625rem
+    .quantity
+      margin-left: .375rem
+      min-width: 1.25rem
+      min-height: 1.25rem
+      background-color: #000
+      color: #fff
+      padding: .1875rem
+      border-radius: 100%
+      display: inline-block
+      text-align: center
   &__saleInput
-    margin-left: rem(68px)
     margin-top: rem(6px)
     input
       display: none
@@ -31,10 +59,17 @@
         top: 0
   &__selectFilters
     display: flex
-    width: rem(1026px)
+    max-width: rem(1026px)
+    width: 100%
     justify-content: space-between
+  .pagination
+    margin-top: rem(12px)
   .resetFilter
-    margin-left: rem(128px)
+  .filterButtons
+    max-width: 408px
+    width: 100%
+    display: flex
+    justify-content: space-between
 .resetFilter
   position: relative
   padding: rem(10px 9px 9px 26px)
@@ -53,8 +88,8 @@
     -webkit-background-size: contain
     background-size: contain
     opacity: 0.5
-    left: rem(7px)
-    top: rem(12px)
+    left: rem(9px)
+    top: rem(10px)
 .pagination
   padding: rem(12px 0)
   display: flex
@@ -62,9 +97,9 @@
   justify-content: space-between
   border-top: rem(2px) solid #eeeeee
   border-bottom: rem(2px) solid #eeeeee
-  span
-    margin-right: rem(11px)
-  & > div
+  &__sort
+    display: flex
+  &__pages
     display: flex
   &__quantityModel
     padding-left: rem(8px)
@@ -101,20 +136,21 @@
     display: flex
     align-items: center
     height: rem(24px)
-    margin-right: rem(18px)
+    margin: rem(0 18px 0 12px)
     .btn
       margin-right: rem(5px)
       &:last-child
         margin-right: 0
   &__arrows
     display: flex
+    margin-left: rem(10px)
   &__buttonPrev
-    width: rem(30px)
+    width: rem(26px)
     height: rem(34px)
     background: url(/img/icons/pag-prew.png) no-repeat center
     background-size: rem(12px 12px)
   &__buttonNext
-    width: rem(32px)
+    width: rem(26px)
     height: rem(34px)
     background: url(/img/icons/pag-next.png) no-repeat center
     background-size: rem(12px 12px)

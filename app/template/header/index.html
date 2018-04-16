@@ -7,6 +7,7 @@
     </div>
     <div class="topBar">
         <div class="logo"></div>
+        <div class="topBarBackBtn"></div>
         <div class="hotLine">
             <div class="hotLine__title">Горячая линия M&S </div>
             <div class="hotLine__tel">
@@ -23,15 +24,17 @@
                 <a href="#">карта магазинов</a>
             </div>
             <div class="barInfo__favorite">
-                <a href="#">избранное<span>27</span></a>
+                <a href="#">
+                    <span class="title">избранное</span>
+                    <span class="quantity">27</span></a>
             </div>
             <div class="barInfo__login">
-                <a href="#">Вход</a>
+                <a href="#" id="show-modal" @click="showModal = true">Вход</a>
             </div>
             <div class="basketIndicator">
                 <a href="#">
-                    Ваша корзина:
-                    <span>25</span>
+                    <span class="title">Ваша корзина:</span>
+                    <span class="quantity">25</span>
                 </a>
             </div>
         </div>
@@ -39,5 +42,12 @@
     //= navMenu/index.html
     <div class="transfer">
         Доставка на следующий день. При покупке от 7000 рублей.
+    </div>
+    <div class="hotLine">
+        <div class="hotLine__title">Горячая линия M&S </div>
+        <div class="hotLine__tel">
+            <a href="tel:88001001010">8 800 100 10 10</a>
+        </div>
+        <div class="hotLine__hint">звонок по России бесплатный</div>
     </div>
 </header>

@@ -18,19 +18,23 @@ var path = {
         js: 'dist/js/',
         css: 'dist/css/',
         img: 'dist/img/',
+        php: 'dist',
         fonts: 'dist/fonts/'
+
     },
     app: { //Пути откуда брать исходники
         html: 'app/*.html',
         js: 'app/js/main.js',
         style: 'app/sass/main.sass',
         img: 'app/img/**/*.*',
+        php: 'app/send.php',
         fonts: 'app/fonts/**/*.*'
     },
     watch: { //Указываем, за изменением каких файлов мы хотим наблюдать
         html: 'app/**/*.html',
         js: 'app/js/**/*.js',
         style: 'app/sass/**/*.sass',
+        php:'app/send.php',
         img: 'app/img/**/*.*',
         fonts: 'app/fonts/**/*.*'
     },
@@ -100,6 +104,10 @@ gulp.task('fonts:dist', function() {
     gulp.src(path.app.fonts)
         .pipe(gulp.dest(path.dist.fonts))
 });
+gulp.task('php:dist', function() {
+    gulp.src(path.app.php)
+        .pipe(gulp.dest(path.dist.php))
+})
 //**************************************************
 
 //********************BUILD************************
@@ -108,6 +116,7 @@ gulp.task('build', [
     'js:dist',
     'style:dist',
     'fonts:dist',
+    'php:dist',
     'image:dist'
 ]);
 //**************************************************
@@ -118,6 +127,7 @@ gulp.task('watch', function(){
     gulp.watch(path.watch.style, ['style:dist']);
     gulp.watch(path.watch.js,['js:dist']);
     gulp.watch(path.watch.img,['image:dist']);
+    gulp.watch(path.watch.php,['php:dist']);
 });
 
 //     gulp.watch([path.watch.fonts], function(event, cb) {

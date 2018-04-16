@@ -1,0 +1,181 @@
+@media (max-width: 1599px)
+  .header
+    padding: 0 2.0625rem
+  .hotLine
+    margin: 7px 6px 0 18px
+    &__title
+      display: none
+
+@media (max-width: 1199px)
+  .sidebar
+    display: none
+  .logo
+    background-image: url(/img/mobile-logo.jpg)
+    width: 5.625rem
+    height: 1.938rem
+    order: 2
+  .header
+    padding: 0
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+  .topBanner
+    flex: 0 0 100%
+    padding: 28px 10px
+    order: 1
+    .btn
+      right: rem(6px)
+    .title
+      letter-spacing: -0.01rem
+    background-position: center
+  .topBar
+    width: calc(100% - 120px)
+    order: 3
+  .navMenu
+    border: 0
+    order: 2
+    margin-top: 0
+    .mobileMenu
+      display: block
+    &:after
+      content: none
+    & > ul
+      display: none
+  .transfer
+    border-top: 6px solid #000
+    order: 4
+    flex: 0 0 100%
+    &:before
+      content: none
+    &:after
+      content: none
+  .basketIndicator
+    a
+      position: relative
+      padding-left: 0
+      padding-right: 0
+      max-width: 61px
+      height: 100%
+      box-shadow: inset 0 0.125rem 0.063rem rgba(255, 255, 255, 0.15)
+      border: 0.063rem solid #2a2a2a
+      background-color: #d9d9d9
+      background-image: linear-gradient(to top, #373738 0%, #575757 100%)
+      &:before
+        width: rem(26px)
+        height: 1.875rem
+        background-size: contain
+        background: url(/img/icons/shop.png) no-repeat
+        top: 7px
+        right: 50%
+        transform: translate(50%)
+      .title
+        text-indent: -9999px
+        display: block
+      .quantity
+        position: absolute
+        right: 10px
+        font-size: 11px
+        background-color: #aac124
+        padding: .1875rem
+        border-radius: 100%
+        color: #000
+  .barInfo
+    max-height: rem(52px)
+    order: 3
+    &__login
+      &:before
+        background-image: url(/img/icons/man-mobile.png)
+        width: 1.938rem
+        height: 2rem
+        left: 50%
+        transform: translate(-50%)
+      a
+        min-width: rem(61px)
+        text-indent: -9999px
+        padding: 0
+    &__favorite
+      &:before
+        background-image: url(/img/icons/favorite-mobile.png)
+        width: 2rem
+        height: 1.938rem
+        left: 0
+        transform: translate(50%)
+      a
+        padding: 0
+        min-width: rem(61px)
+        position: relative
+        .title
+          display: none
+        .quantity
+          position: absolute
+          right: 8px
+          top: 24px
+          padding: 3px
+          height: auto
+          width: auto
+          font-size: 10px
+    &__map
+      &:before
+        width: 27px
+        height: 33px
+        background: url(/img/icons/map-mobile.png) no-repeat
+        background-size: contain
+        left: 50%
+        transform: translate(-50%)
+      a
+        text-indent: -9999px
+        width: rem(56px)
+        padding: 0
+    &__search
+      position: relative
+      min-width: rem(61px)
+      padding-top: 0
+      &:before
+        content: ''
+        //background-image: url()
+      input
+        display: none
+      input[type=submit]
+        background: url(/img/icons/search-mobile.png) center no-repeat
+        background-size: 1.938rem 1.875rem
+        display: block
+        width: 61px
+        height: 100%
+
+@media (max-width: 767px)
+  .topBar
+    border-top: 0.063rem solid #cccccc
+    width: calc(100% - 50px)
+    &BackBtn
+      display: block
+  .navMenu
+    .mobileMenu
+      min-width: 50px
+      width: auto
+      background-color: transparent
+      border-top: 0.063rem solid #cccccc
+      border-right: 0.063rem solid #cccccc
+      &:after
+        background-image: url(/img/icons/menu-black.svg)
+      .title
+        display: none
+  .hotLine
+    display: none
+  .header > .hotLine
+    display: block
+    order: 5
+    .hotLine__title
+      display: initial
+  .topBanner
+    display: none
+  .transfer
+    display: none
+  .barInfo
+    &__login
+      display: none
+    &__favorite
+      display: none
+    &__map
+      display: none
+    &__search
+      border-left: 0.063rem solid #cccccc

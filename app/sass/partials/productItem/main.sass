@@ -1,0 +1,86 @@
+.productList
+  display: flex
+  flex-wrap: wrap
+  padding-top: 14px
+  padding-left: 6px
+.productItem
+  margin-top: rem(52px)
+  &:nth-child(1)
+    margin-top: 0
+  &:nth-child(2)
+    margin-top: 0
+  &:nth-child(3)
+    margin-top: 0
+  &:nth-child(4)
+    margin-top: 0
+  max-width: rem(285px)
+  width: 100%
+  position: relative
+  .like
+    position: absolute
+    top: 0
+    right: 0
+    background-image: url(/img/icons/like_sprites.png)
+    background-position: -10px -10px
+    width: 26px
+    height: 26px
+    cursor: pointer
+    z-index: 1
+    &.active
+      background-position: -56px -10px
+  .link
+    text-align: center
+    .goCart
+      display: flex
+      flex-wrap: wrap
+      position: relative
+      .tags
+        position: absolute
+        left: 0
+        bottom: 18px
+        .tagRecommended
+          background-image: url(/img/icons/recommended.png)
+          height: 42px
+          width: 133px
+      > *
+        flex: 0 0 100%
+        text-align: center
+      img
+        margin-bottom: 10px
+    .title
+      color: #333333
+      font-size: 1rem
+      font-weight: 400
+      line-height: 1.125rem
+      margin-bottom: 2px
+    .collection
+      display: block
+      color: #999999
+      font-size: 0.688rem
+      line-height: 1.125rem
+    .price
+      line-height: 1.625rem
+      font-weight: 500
+      font-size: 15px
+    .fastView
+  .colorVariant
+    display: flex
+    justify-content: center
+    margin-top: 6px
+    .color
+      width: 1rem
+      height: 1rem
+      background-color: #d9cbbe
+      border: rem(1px) solid #cccccc
+      margin-right: rem(4px)
+      &:last-child
+        margin-right: 0
+  .rating
+    background-image: url(/img/icons/rating.png)
+    width: 5.25rem
+    height: 0.938rem
+    margin: 10px auto 0 auto
+
+
+
+

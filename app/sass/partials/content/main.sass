@@ -1,6 +1,6 @@
 @import "breadcrumbs/main"
 @import "banner/main"
-@import "filters/main.sass"
+@import "filters/main"
 .titleCategory
   color: #000000
   font-family: "Roboto Condensed"
@@ -9,3 +9,15 @@
   line-height: rem(49px)
   text-transform: uppercase
   text-align: center
+.wrapperContent
+  display: flex
+  flex-wrap: wrap
+  > .content
+    width: 78.2%
+    padding-bottom: 50px
+.inner-page
+  padding: rem(0 49px)
+  & > .pagination
+    display: none
+
+@import "media"

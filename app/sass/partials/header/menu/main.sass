@@ -18,6 +18,27 @@
     height: 6px
     background-color: #111
     bottom: rem(-6px)
+  .mobileMenu
+    position: relative
+    width: rem(120px)
+    height: rem(50px)
+    background-color: #000
+    font-size: 1rem
+    display: none
+    &:after
+      content: ''
+      position: absolute
+      width: rem(29px)
+      height: rem(29px)
+      background-image: url(/img/icons/menu.svg)
+      background-size: contain
+      bottom: rem(10px)
+      left: rem(8px)
+    .title
+      color: #fff
+      text-transform: uppercase
+      line-height: rem(50px)
+      padding-left: rem(48px)
   ul
     display: flex
     justify-content: space-between

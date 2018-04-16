@@ -1,0 +1,146 @@
+@media (max-width: 1199px)
+  .resetFilter
+    background: none
+    background-color: #eeeeee
+    color: #666a6f
+    border: none
+    margin-left: rem(3px)
+    padding: .625rem .5625rem .5625rem 1.812rem
+    &:after
+      background-image: url(/img/icons/reset.png)
+  .inner-page
+    margin-top: rem(2px)
+    padding: 0
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    align-items: center
+    > .pagination
+      order: 4
+      display: flex
+  .titleCategory
+    padding-left: rem(7px)
+    order: 2
+    font-size: 1.75rem
+    font-weight: 400
+    line-height: rem(52px)
+  .productFilters
+    padding-right: 7px
+    order: 3
+    margin-top: 0
+    max-height: rem(33px)
+    &__buttonMobile
+      display: block
+      padding: rem(6px 7px 6px 31px)
+      .quantity
+        min-width: rem(15px)
+        min-height: rem(15px)
+        font-size: 0.563rem
+    &__selectFilters
+      display: none
+    &__saleInput
+      display: none
+    .filterButtons
+      justify-content: flex-end
+    .pagination
+      display: none
+  .innerBaner
+    order: 1
+    flex: 0 0 100%
+    margin-top: 0
+    height: auto
+    padding: rem(23px 0 21px 0)
+    .content
+      min-height: auto
+      width: rem(400px)
+      padding: 13px 0 15px
+      .title
+        font-size: 1.5rem
+        font-weight: 400
+        line-height: 1.778rem
+        margin-bottom: rem(9px)
+      .subTitle
+        font-size: 0.813rem
+        font-style: italic
+        line-height: 0.889rem
+  .wrapperContent
+    padding-left: 7px
+    padding-right: 7px
+    order: 5
+    flex: 0 0 100%
+    & > .content
+      width: 100%
+    .pagination
+      padding: rem(13px 0px)
+  .breadcrumbs
+    display: none
+  .pagination
+    padding: rem(13px 7px)
+    & > div
+      justify-content: space-between
+      width: 100%
+    &__perPage
+      display: none
+    &__pages
+      display: none
+    &__quantityModel
+      padding-left: 1px
+      border-right: 0
+  .productList
+    justify-content: space-between
+    padding-left: 0
+  .transfer
+    border-bottom: 0
+  .productItem
+    max-width: 242px
+    margin-top: rem(40px)
+    &:nth-child(4)
+      margin-top: rem(40px)
+    .link
+      .goCart
+        img
+          max-width: rem(242px)
+          max-height: rem(314px)
+          margin-bottom: rem(16px)
+        .tags
+          bottom: rem(20px)
+    .colorVariant
+      margin-top: rem(4px)
+    .like
+      top: rem(7px)
+      right: rem(6px)
+
+@media (max-width: 767px)
+  .inner-page
+    background-color: #e6e6e6
+  .innerBaner
+    background-color: #e6e6e6
+    order: 3
+    flex: 0 0 auto
+    border: 0
+    display: none
+  .productFilters
+    width: 100%
+    order: 4
+    padding-left: 7px
+    .filterButtons
+      flex: 0 0 100%
+      justify-content: space-between
+      max-width: unset
+  .pagination
+    border: none
+    &__select
+      display: none
+  .productList
+    justify-content: center
+    .productItem
+
+      background-color: #fff
+      max-width: unset
+      max-width: 19.25rem
+      .link
+        .goCart
+          img
+            max-width: unset
+            width: 100%
+            max-height: unset

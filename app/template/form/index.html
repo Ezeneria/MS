@@ -1,0 +1,21 @@
+<form @submit="checkForm" action="send.php">
+
+    <p v-if="errors.length">
+        <b>Please correct the following error(s):</b>
+    <ul>
+        <li v-for="error in errors">{{ error }}</li>
+    </ul>
+    </p>
+    <p>
+        <label for="name">Name<label>
+            <input type="text" name="name" id="name" v-model="name">
+    </p>
+
+    <p>
+        <label for="email">Age<label>
+            <input type="email" name="email" id="email" v-model="email" min="0">
+    </p>
+    <p>
+        <input type="submit" value="Submit">
+    </p>
+</form>

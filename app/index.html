@@ -4,10 +4,58 @@
     //= template/head/index.html
 </head>
 <body>
+<div id="app">
 //= template/header/index.html
     <div class="inner-page">
         //= template/innerPage/index.html
     </div>
 //= template/footer/index.html
+        <modal v-if="showModal" @close="showModal = false">
+            <div slot="body">
+                //= template/form/index.html
+            </div>
+        </modal>
+
+    <script type="text/x-template" id="modal-template">
+        <transition name="modal">
+            <div class="modal-mask">
+                <div class="modal-wrapper">
+                    <div class="modal-container">
+                        <slot name="body">
+                            default body
+                        </slot>
+                    </div>
+                </div>
+            </div>
+        </transition>
+    </script>
+    <script>
+        Vue.component('modal', {
+            template: '#modal-template'
+        });
+        // start app
+        new Vue({
+            el: '#app',
+            data: {
+                showModal: false,
+                errors:[],
+                name:null,
+                email:'',
+                movie:null
+            }, methods:{
+                checkForm:function(e) {
+                    if(this.name && this.email) {
+                        $emit('close');
+                        return true
+                    }
+                    this.errors = [];
+                    if(!this.name) this.errors.push("Name required.");
+                    if(!this.email) this.errors.push("email required.");
+                    e.preventDefault();
+                }
+            }
+        });
+    </script>
+</div>
 </body>
 </html>

@@ -41,6 +41,13 @@
 .topBar
   display: flex
   justify-content: space-between
+  &BackBtn
+    display: none
+    min-width: 50px
+    height: 100%
+    background: url(/img/icons/back.png) no-repeat center
+    background-size: 1.5rem 1.5rem
+    border-right: 0.063rem solid #cccccc
 .logo
   background: url(/img/logo.png) no-repeat
   width: 7.313rem
@@ -89,11 +96,12 @@
       background-size: rem(18px)
       border: 0
   &__map
-    padding: rem(8px 14px 0 31px)
     position: relative
     border-right: 1px solid #cccccc
     a
-      line-height: 0.001rem
+      padding: rem(8px 14px 0 31px)
+      display: block
+      height: 100%
       text-transform: uppercase
     &:before
       content: ''
@@ -106,7 +114,6 @@
       background-size: contain
       z-index: 20
   &__favorite
-    padding: rem(8px 13px 0 29px)
     position: relative
     border-right: 1px solid #cccccc
     &:before
@@ -119,8 +126,10 @@
       top: rem(8px)
       left: rem(11px)
     a
-      line-height: 0.001rem
       text-transform: uppercase
+      padding: .5rem .8125rem 0 1.8125rem;
+      display: block
+      height: 100%
       span
         margin-left: rem(6px)
         width: 1.25rem
@@ -130,11 +139,10 @@
         -webkit-border-radius: 100%
         -moz-border-radius: 100%
         border-radius: 100%
+      .title
+        background: none
   &__login
-    padding-top: .5rem
     position: relative
-    padding-left: rem(25px)
-    padding-right: rem(14px)
     &:before
       content: ''
       position: absolute
@@ -144,7 +152,12 @@
       left: rem(9px)
       top: rem(9px)
     a
+      display: block
       text-transform: uppercase
+      padding-top: .5rem
+      padding-left: rem(25px)
+      padding-right: rem(14px)
+      height: 100%
 .basketIndicator
   a
     position: relative
@@ -163,3 +176,5 @@
       top: 0
     span
       color: #aac124
+    .title
+      color: #fff
